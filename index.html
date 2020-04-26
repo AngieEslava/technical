@@ -1,0 +1,278 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical web</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#etapas">Etapas del proceso KDD</a></li>
+            <li><a href="#seleccion">Etapa de Selección</a></li>
+            <li><a href="#preprocesamiento">Etapa de Preprocesamiento y Limpieza</a></li>
+            <li><a href="#transformacion">Etapa de Transformación y Reducción</a></li>
+            <li><a href="#mineria">Etapa de Minería de Datos</a></li>
+            <li><a href="#evaluacion">Etapa de Interpretación y Evaluación de Datos</a></li>
+            <li><a href="#tareas">Tareas de minería de datos</a></li>
+            <li><a href="#clasificacion">Clasificación</a></li>
+            <li><a href="#arbol">Árboles de Decisiones</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="introduccion">
+            <header>
+                <h1>Descubrimiento del Conocimiento</h1>
+            </header>
+            <article >
+                <p>El proceso de extraer conocimiento a partir de grandes volúmenes de datos ha
+                    sido reconocido por muchos investigadores como un tópico de investigación
+                    clave en los sistemas de bases de datos, y por muchas compañías industriales
+                    como una importante área y una oportunidad para obtener mayores ganancias
+                    (Timarán, 2009). Autores como Fayyad, Piatetsky-Shapiro y Smith (1996, p.
+                    89) lo definen como “El proceso no trivial de identificación de patrones válidos,
+                    novedosos, potencialmente útiles y fundamentalmente entendibles al usuario a
+                    partir de los datos”.</p>
+                <p>El Descubrimiento de conocimiento en bases de datos (kdd, del inglés
+                    Knowledge Discovery in Databases) es básicamente un proceso automático en el que
+                    se combinan descubrimiento y análisis. El proceso consiste en extraer patrones en
+                    forma de reglas o funciones, a partir de los datos, para que el usuario los analice.
+                    Esta tarea implica generalmente preprocesar los datos, hacer minería de datos
+                    (data mining) y presentar resultados (Agrawal y Srikant, 1994) (Chen, Han y Yu,
+                    1996) (Piatetsky Shapiro, Brachman y Khabaza, 1996) (Han y Kamber, 2001). kdd
+                    se puede aplicar en diferentes dominios, por ejemplo, para determinar perfiles de
+                    clientes fraudulentos (evasión de impuestos), para descubrir relaciones implícitas
+                    existentes entre síntomas y enfermedades, entre características técnicas y diagnóstico
+                    del estado de equipos y máquinas, para determinar perfiles de estudiantes
+                    “académicamente exitosos” en términos de sus características socioeconómicas y
+                    para determinar patrones de compra de los clientes en sus canastas de mercado.</p>
+            </article>
+        </section>
+        <section class="main-section" id="etapas">
+            <header>
+                <h1>Etapas del proceso kdd</h1>
+            </header>
+            <article>
+                <p>
+                    El proceso kdd que se muestra en la figura 1 es interactivo e iterativo, involucra
+                    numerosos pasos con la intervención del usuario en la toma de muchas decisiones.
+                    Se resume en las siguientes etapas:
+                </p>
+                <ol>
+                    <li>Selección.</li>
+                    <li>Preprocesamiento / Limpieza.</li>
+                    <li>Transformación / Reducción.</li>
+                    <li>Minería de datos (data mining).</li>
+                    <li>Interpretación/evaluación.</li>
+                </ol>
+            </article>
+        </section>
+        <section id="seleccion">
+            <h2>Etapa de Selección</h2>
+            <article>
+                <p>En la etapa de selección, una vez identificado el conocimiento relevante y prioritario
+                    y definidas las metas del proceso kdd, desde el punto de vista del usuario final, se
+                    crea un conjunto de datos objetivo, seleccionando todo el conjunto de datos o una
+                    muestra representativa de este, sobre el cual se realiza el proceso de descubrimiento.
+                    La selección de los datos varía de acuerdo con los objetivos del negocio.</p>
+            </article>
+        </section>
+        <section id="preprocesamiento">
+            <h2>Etapa de Preprocesamiento y Limpieza</h2>
+            <article>
+                <p>En la etapa de preprocesamiento/limpieza (data cleaning) se analiza la calidad de
+                    los datos, se aplican operaciones básicas como la remoción de datos ruidosos, se
+                    seleccionan estrategias para el manejo de datos desconocidos (missing y empty),
+                    datos nulos, datos duplicados y técnicas estadísticas para su reemplazo. En esta
+                    etapa, es de suma importancia la interacción con el usuario o analista.</p>
+                <p>Los datos ruidosos (noisy data) son valores que están significativamente fuera
+                    del rango de valores esperados; se deben principalmente a errores humanos,
+                    a cambios en el sistema, a información no disponible a tiempo y a fuentes
+                    heterogéneas de datos. Los datos desconocidos empty son aquellos a los cuales no
+                    les corresponde un valor en el mundo real y los missing son aquellos que tienen
+                    un valor que no fue capturado. Los datos nulos son datos desconocidos que son
+                    permitidos por los sistemas gestores de bases de datos relacionales (sgbdr). En el
+                    proceso de limpieza todos estos valores se ignoran, se reemplazan por un valor por
+                    omisión, o por el valor más cercano, es decir, se usan métricas de tipo estadístico
+                    como media, moda, mínimo y máximo para reemplazarlos.</p>
+            </article>
+        </section>
+        <section id="transformacion">
+            <h2>Etapa de Transformación y Reducción</h2>
+            <article>
+                <p>En la etapa de transformación/reducción de datos, se buscan características útiles
+                    para representar los datos dependiendo de la meta del proceso. Se utilizan métodos
+                    de reducción de dimensiones o de transformación para disminuir el número efectivo
+                    de variables bajo consideración o para encontrar representaciones invariantes
+                    de los datos (Fayyad et al., 1996).</p>
+                <p>Los métodos de reducción de dimensiones pueden simplificar una tabla de
+                    una base de datos horizontal o verticalmente. La reducción horizontal implica la
+                    eliminación de tuplas idénticas como producto de la sustitución del valor de un
+                    atributo por otro de alto nivel, en una jerarquía definida de valores categóricos
+                    o por la discretización de valores continuos (por ejemplo, edad por un rango
+                    de edades). La reducción vertical implica la eliminación de atributos que son
+                    insignificantes o redundantes con respecto al problema, como la eliminación de
+                    llaves, la eliminación de columnas que dependen funcionalmente (por ejemplo,
+                    edad y fecha de nacimiento). Se utilizan técnicas de reducción como agregaciones,
+                    compresión de datos, histogramas, segmentación, discretización basada
+                    en entropía, muestreo, entre otras (Han y Kamber, 2001).</p>
+            </article>
+        </section>
+        <section id="mineria">
+            <h2>Etapa de Minería de Datos</h2>
+            <article>
+                <p>El objetivo de la etapa minería de datos es la búsqueda y descubrimiento de patrones
+                    insospechados y de interés, aplicando tareas de descubrimiento como clasificación
+                    (Quinlan, 1986) (Wang, Iyer y Scott, 1998), clustering (Ng y Han, 1994), (Zhang,
+                    Ramakrishnan, Livny, 1996), patrones secuenciales (Agrawal y Srikant, 1995) y
+                    asociaciones (Agrawal y Srikant, 1994), (Srikant y Agrawal, 1996), entre otras.</p>
+                <p>Las técnicas de minería de datos crean modelos que son predictivos o descriptivos.
+                    Los modelos predictivos pretenden estimar valores futuros o desconocidos de variables de interés,
+                    que se denominan variables objetivo, dependientes o
+                    clases, usando otras variables denominadas independientes o predictivas, como
+                    por ejemplo predecir para nuevos clientes si son buenos o malos basados en su
+                    estado civil, edad, género y profesión, o determinar para nuevos estudiantes si
+                    desertan o no en función de su zona de procedencia, facultad, estrato, género,
+                    edad y promedio de notas. Entre las tareas predictivas están la clasificación y la
+                    regresión. Los modelos descriptivos identifican patrones que explican o resumen
+                    los datos; sirven para explorar las propiedades de los datos examinados, no para
+                    predecir nuevos datos, como identificar grupos de personas con gustos similares o
+                    identificar patrones de compra de clientes en una determinada zona de la ciudad.
+                    Entre las tareas descriptivas se cuentan las reglas de asociación, los patrones
+                    secuenciales, los clustering y las correlaciones.</p>
+                <p>Por lo tanto, la escogencia de un algoritmo de minería de datos incluye la
+                    selección de los métodos por aplicar en la búsqueda de patrones en los datos, así
+                    como la decisión sobre los modelos y los parámetros más apropiados, dependiendo
+                    del tipo de datos (categóricos, numéricos) por utilizar.</p>
+            </article>
+        </section>
+        <section id="evaluacion">
+            <h2>Etapa de Interpretación y Evaluación de Datos</h2>
+            <article>
+                <p>En la etapa de interpretación/evaluación, se interpretan los patrones descubiertos
+                    y posiblemente se retorna a las anteriores etapas para posteriores iteraciones. Esta
+                    etapa puede incluir la visualización de los patrones extraídos, la remoción de los
+                    patrones redundantes o irrelevantes y la traducción de los patrones útiles en términos
+                    que sean entendibles para el usuario. Por otra parte, se consolida el conocimiento
+                    descubierto para incorporarlo en otro sistema para posteriores acciones o, simplemente,
+                    para documentarlo y reportarlo a las partes interesadas; también para verificar
+                    y resolver conflictos potenciales con el conocimiento previamente descubierto.</p>
+            </article>
+        </section>
+        <section id="tareas">
+            <h1>Tareas de minería de datos</h1>
+            <article>
+                <p>Dentro de la minería de datos se encuentran diferentes tipos de tareas, las cuales
+                    pueden considerarse como un tipo de problema para ser resuelto por un algoritmo
+                    de minería de datos (Hernández, Ramírez y Ferri, 2005). Entre las tareas de
+                    minería de datos más importantes están la clasificación, segmentación o clustering,
+                    asociación y patrones secuenciales.</p>
+            </article>
+        </section>
+        <section id="clasificacion">
+            <h2>Clasificación</h2>
+            <article>
+                <p>La clasificación de datos permite obtener resultados a partir de un proceso de
+                    aprendizaje supervisado. Es, además, el proceso por medio del cual se encuentran
+                    propiedades comunes entre un conjunto de objetos de una base de datos y se los
+                    cataloga en diferentes clases, de acuerdo con el modelo de clasificación (Agrawal,
+                    Ghosh, Imielinsky, Iyer y Swami, 1992).</p>
+                <p>Este proceso se realiza en dos pasos: en el primero se construye un modelo,
+                    en el cual cada tupla de un conjunto de tuplas de la base de datos tiene una clase
+                    conocida (etiqueta), determinada por uno de los atributos de la base de datos
+                    llamado atributo clase. El conjunto de tuplas que sirve para construir el modelo
+                    se denomina conjunto de entrenamiento y se escoge randómicamente del total de
+                    tuplas de la base de datos. A cada tupla de este conjunto se denomina ejemplo
+                    de entrenamiento (Han y Kamber, 2001). En el segundo paso se usa el modelo
+                    para clasificar. Inicialmente, se estima la exactitud del modelo utilizando otro
+                    conjunto de tuplas de la base de datos, cuya clase es conocida, denominado conjunto
+                    de prueba. Este conjunto es escogido randómicamente y es independiente del
+                    conjunto de entrenamiento. A cada tupla de este conjunto se denomina ejemplo
+                    de prueba (Han y Kamber, 2001).</p>
+                <p>La exactitud del modelo, sobre el conjunto de prueba, es el porcentaje de ejemplos
+                    de prueba que son correctamente clasificadas por el modelo. Si la exactitud
+                    del modelo se considera aceptable, se puede usar para clasificar futuros datos o
+                    tuplas para los cuales no se conoce la clase a la que pertenecen. Se han propuesto
+                    varios métodos de clasificación: rough sets, árboles de decisión, redes neuronales,
+                    Bayes, algoritmos genéticos entre otros.</p>
+                <p>El modelo de clasificación basado en árboles de decisión es probablemente
+                    el más utilizado y popular por su simplicidad y facilidad para entender (Han y
+                    Kamber, 2001), (Sattler y Dunemann, 2001). Este modelo tiene su origen en los
+                    estudios de aprendizaje de máquina. Este es un método de aprendizaje supervisado
+                    que construye árboles de decisión a partir de un conjunto de casos o ejemplos
+                    denominados conjunto de entrenamiento (training set) extraídos de la base de datos.
+                    También se escoge un conjunto de prueba, cuyas características son conocidas,
+                    con el fin de evaluar el árbol.</p>
+                <p>La calidad del árbol depende de la precisión de la clasificación y del tamaño
+                    del árbol (Chen, Han y Yu, 1996). El método primero escoge un subconjunto
+                    del conjunto de entrenamiento y forma un árbol de decisión. Si el árbol no da
+                    la respuesta correcta para todos los objetos del conjunto prueba, una selección 
+                    de excepciones se adiciona al conjunto de entrenamiento y el proceso continúa
+                    hasta que se encuentra el conjunto de decisiones correctas. El eventual resultado
+                    es un árbol en el cual cada hoja lleva un nombre de la clase y cada nodo interior
+                    especifica un atributo con una rama correspondiente a cada posible valor del
+                    atributo.                </p>
+                    <p>La idea
+                        básica de estos algoritmos es construir los árboles de decisión en los que:
+                    <ol>
+                        <li>Cada nodo no terminal está etiquetado con un atributo.</li>
+                        <li>Cada rama que sale de un nodo está etiquetada con un valor de ese atributo.</li>
+                        <li>Cada nodo terminal está etiquetado con un conjunto de casos, los cuales
+                            satisfacen todos los valores de atributos que etiquetan el camino desde ese
+                            nodo al nodo inicial.</li>
+                    </ol></p>
+                    <p>La aplicación de un atributo A como criterio de selección clasifica los casos
+                        en distintos conjuntos (tantos como valores discretos del atributo). Se trata de
+                        construir el árbol de decisión más simple que sea consistente con el conjunto
+                        de entrenamiento T. Para ello hay que ordenar los atributos relevantes, desde la
+                        raíz a los nodos terminales, de mayor a menor poder de clasificación. El poder
+                        de clasificación de un atributo A es su capacidad para generar particiones del
+                        conjunto de entrenamiento que se ajuste en un grado dado a las distintas clases
+                        posibles; de esta forma se introduce un orden en dicho conjunto. El orden o el
+                        desorden (ruido) de un conjunto de datos son medibles. El poder de clasificación
+                        de un atributo se mide de acuerdo con su capacidad para reducir la incertidumbre
+                        o entropía (grado de desorden de un sistema). Esta métrica se denomina ganancia
+                        de información. El atributo con la más alta ganancia de información se escoge como
+                        el atributo que forme un nodo en el árbol (Quinlan, 1993) (Agrawal et al., 1992).</p>
+                    </article>
+                </section>
+                <section id="arbol">
+                    <h2>Árboles de Decisiones</h2>
+                    <article>
+                    <p>El árbol de decisión se construye de la siguiente forma:
+                        <ol>
+                            <li>Calcular la entropía que puede reducir cada atributo.</li>
+                            <li>Ordenar los atributos de mayor a menor capacidad de reducción de entropía.</li>
+                            <li>Construir el árbol de decisión siguiendo la lista ordenada de atributos.</li>
+                        </ol>
+                    </p>
+                    <p>La ganancia de información obtenida por el particionamiento del conjunto T,
+                        de acuerdo con el atributo A se define como: <code>Gain(T, A)= I(T) - E(A)</code> </p>
+                    <p>Donde, I(T) es la entropía del conjunto T, compuesto de s ejemplos y m distintas
+                        clases Ci (i=1,m) y se calcula: <code>I(T) = Sum( pi log2 (pi))</code> </p>
+                    <p>Donde, pi= si/s es la probabilidad que un ejemplo cualquiera pertenezca a una
+                        clase Ci y si es el número de ejemplos de T de la clase Ci.</p>
+                    <p>E(A) es la entropía del conjunto T si es particionado por los n diferentes valores
+                        del atributo A en n subconjuntos, {S1, S2, ... Sn}, donde Sj contiene esos ejemplos
+                        de T que tienen el valor aj en A y sij el número de ejemplos de la clase Ci en el
+                        subconjunto Sj.</p>
+                    <p>E(A) se calcula: <code>E(A)= Sum(sij/ s * I(Sij))</code> Donde, sij el número de ejemplos de la clase Ci en el subconjunto Sj</p>
+                    <p><code>I(Sij)= - pij log2(pij)</code>Donde pij=sij / |sj| es la probabilidad de que un ejemplo de Sj pertenezca a la
+                        clase Ci.</p>
+                    <p>En otras palabras, Gain (T, A) es la reducción esperada de la entropía causada
+                        por el particionamiento de T de acuerdo con el atributo A.
+                        Finalmente, las reglas de clasificación se obtienen recorriendo cada rama del
+                        árbol desde la raíz hasta el nodo terminal. El antecedente de la regla es la conjunción
+                        de los pares recogidos en cada nodo y el consecuente es el nodo terminal.</p>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
